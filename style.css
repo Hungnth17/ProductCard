@@ -1,0 +1,146 @@
+:root{
+    --primary-color: #4daf54;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #4daf54, #3d8888);
+    font-family: "Poppins";
+}
+
+.card{
+    margin: 120px auto;
+    width: 320px;
+    height: 500px;
+    background: #272d40;
+    padding: 20px;
+    border-radius: 15px;
+    position: relative;
+    color: white;
+}
+
+.card_heart, .card_cart{
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+.card_cart{
+    left: unset;
+    right: 20px;
+}
+
+.card_ima {
+    width: 90%;
+    transition: 0.5s;
+}
+
+.center-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.card_ima img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card_title, .card_price {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.card_title{
+    color: var(--primary-color);
+}
+
+.card_color, .card_size{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card_size span{
+    padding: 2px 15px;
+    background: #dadada;
+    color: black;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.card_color span{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.card_color--green{
+    background: green;
+}
+
+.card_color--red{
+    background: red;
+}
+
+.card_color--black{
+    background: black;
+}
+
+.card_act button{
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px ;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card_act button:hover{
+    transform: scale(0.9);
+}
+
+.card:hover .card_ima{
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card_title, .card:hover .card_price{
+    transform: translate(-5px, -70px);
+}
+
+.card_size{
+    margin-top: 150px;
+}
+
+.card_size, .card_color, .card_act{
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.2s;
+}
+
+.card:hover .card_size, .card:hover .card_color, .card:hover .card_act{
+    visibility: visible;
+    opacity: 100;
+}
+
+.card_size{
+    margin-top: -30px;
+}
